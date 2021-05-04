@@ -21,47 +21,85 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="/css/message.css">
-		<!-- j'ai retiré les css -->
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+		<!-- css Anthony  -->
+        <title>ParkisonDiagnosis</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/css.css">
+        <link rel="stylesheet" href="css/css1.css">
 
-        <div id="noCognitoMessage" class="configMessage" style="display: none;">
-            <div class="backdrop"></div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">No Cognito User Pool Configured</h3>
-                </div>
-                <div class="panel-body">
-                    <p>There is no user pool configured in <a href="/js/config.js">/js/config.js</a>. You'll configure this in Module 2 of the workshop.</p>
-                </div>
-            </div>
+        <!-- icon --> 
+        <link rel="icon" type="images/logo.png" href="images/logo.png">
+        </head>
+
+        <body>
+            <div class = "container-fluid">
+                    <!--[if lt IE 7]>
+                        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+                    <![endif]-->
+
+                    <div id="noCognitoMessage" class="configMessage" style="display: none;">
+                        <div class="backdrop"></div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">No Cognito User Pool Configured</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p>There is no user pool configured in <a href="/js/config.js">/js/config.js</a>. You'll configure this in Module 2 of the workshop.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <header>
+                      
+                    </header>
+                <div class="text-center">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
+                            <div class="justify-content-center">
+                                <div class="bloc1"> 
+                                    <section class="form-wrap">
+                        
+                                        <form id="signinForm">
+
+                                          <div class="champ">   
+                                            Email
+                                            <span class =" mini-bloc">                                        
+                                                <input type="email" class="form-control" id="emailInputSignin" placeholder="Email" required>
+                                            </span>
+                                          </div>
+                                          
+                                          <div class="champ">
+                                            Mot de passe
+                                            <input type="password" class="form-control" id="passwordInputSignin" placeholder="Mot de passe" pattern=".*" required>
+                                          </div> 
+                            			  
+                                          <input class ="champ-connect"type="submit" value="Connexion">
+                                        </form>
+                                    </section>
+                                </div>
+                            </div>
+                        <br>
+                        <br>
+                        <br>
+                        <img src = "images/logos.png" class="banniere"></img>   
+            </div>>
+
+
+                    <script src="js/vendor/jquery-3.1.0.js"></script>
+                    <script src="js/vendor/bootstrap.min.js"></script>
+                    <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+                    <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+                    <script src="js/config.js"></script>
+                    <script src="js/cognito-auth.js"></script>
         </div>
-
-        <header>
-          
-        </header>
-
-
-        <section class="form-wrap">
-            <h1 class=noir>Connectez-vous</h1>
-            <form id="signinForm">
-              <input type="email" id="emailInputSignin" placeholder="Email" required>
-              <input type="password" id="passwordInputSignin" placeholder="Mot de passe" pattern=".*" required>
-			  
-
-              <input type="submit" value="Connexion">
-            </form>
-        </section>
-
-
-        <script src="js/vendor/jquery-3.1.0.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/aws-cognito-sdk.min.js"></script>
-        <script src="js/vendor/amazon-cognito-identity.min.js"></script>
-        <script src="js/config.js"></script>
-        <script src="js/cognito-auth.js"></script>
     </body>
 </html>
