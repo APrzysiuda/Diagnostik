@@ -1,0 +1,194 @@
+
+.bloc-gauche{
+	background-color: rgba(30,144,255,0.3);
+	border-width: thin;
+	border-style : solid;
+	border-color : rgba(30,144,255,0.5);
+	margin: 1%;
+	padding: 1%;
+	width:40%;
+	float:left;
+}
+.box_shadow{
+	border-radius: 30px
+    box-shadow: 0 0px 15px 4px rgba(0, 0, 0, 0.99)
+}
+.hypnogramme{
+	margin: 1%;
+	width: 67%;
+}
+.logo{
+	margin: 1%;
+	width:40%;
+}
+.bloc-droit{
+	background-color: rgba(30,144,255,0.3);
+	margin: 1%;
+	padding: 1%;
+	width:56%;
+	float:right;
+	text-align: center;
+	border-width: thin;
+	border-style : solid;
+	border-color : rgba(30,144,255,0.5);
+}
+.bloc-patient{
+	background-color: rgba(255,255,255,1);
+	text-align: left;
+	width:48%;
+	float:left;
+	margin:1%;
+	padding:1%;
+	padding-top:3%;
+}
+.bloc-test{
+	background-color: rgba(255,255,255,1);
+	width:48%;
+	float:right;
+	text-align: left;
+	margin:1%;
+	padding:1%;
+	padding-top:3%;
+}
+.bloc-txt{
+	background-color: rgba(255,255,255,1);
+	width: 98%;
+	margin:1%;
+	padding:1%;
+	padding-top:3%;
+	text-align: center;
+}
+.drag-and-drop{
+	width: 98%;
+	text-align: center;
+	background-color: rgba(255,255,255,1);
+	border-style : solid;	
+	border-color : black;
+	border-width: thin;
+	padding-bottom: 25.5%;
+	padding-top: 25.5%;
+	margin:1%;
+}
+.bouton-large{
+	width: 98%;
+	padding-bottom: 2%;
+	padding-top: 2%;
+	background-color: rgba(30,144,255,0.7);
+	margin: 1%;
+}
+
+.formulaire{
+	background-color: rgba(30,144,255,0.3);
+	margin: 7%;
+	padding: 0.5%;
+	width:25%;
+	border-width: thin;
+	border-style : solid;
+	border-color : rgba(30,144,255,0.5);
+}
+
+
+.champ{
+	margin:5%;
+	width:90%;
+}
+.champ-connect{
+	width:50%;
+	padding-bottom: 2%;
+	padding-top: 2%;
+	background-color: rgba(30,144,255,0.7);
+}
+.champ-recherche{
+	margin:1%;
+	width:98%;
+}
+.banniere{
+	width:50%;
+}
+.custom-select{
+	width: 80%;
+	float:right;
+}
+.trier{
+	width: 20%;
+	float:left;
+	vertical-align: middle;
+}
+.menu{
+	width: 100%;
+	background-color: rgba(255,255,255,1);
+	overflow-y: auto;
+	height: 100%
+
+}
+.padding-label{
+	padding-left: 30%;
+	padding-right: 30%
+}
+.recherche-input{
+	width: 73%;
+	float:left;
+	margin-bottom: 3%;
+}
+
+.recherche-bouton{
+	width: 25%;
+	float:right;
+	background-color: rgba(30,144,255,0.7);
+	margin-bottom: 3%;
+}
+.envoyer-bouton{
+	width: 25%;
+	float:right;
+	background-color: rgba(30,144,255,0.7);
+	margin-bottom: 2%;
+}
+
+
+.tri-label{
+	width: 11%;
+	float:left;
+}
+
+.tri-input{
+	width: 87%;
+	float:right;
+}
+.champ-menu{
+	margin:1%;
+	width:98%;
+	margin-top:16%;
+}
+.diagnostic-label{
+	width: 20%;
+	float:left;
+	margin-top: 0.25%;
+}
+
+.diagnostic-input{
+	width: 51%;
+	margin-left:2%;
+	margin-right: 2%;
+	margin-top: 0.25%;
+}
+
+
+thead tr {
+    padding-right: 15px;
+    display: -webkit-flex;
+    background-color: rgba(30,144,255,0.7);
+}
+tbody {
+    display: -webkit-flex;
+    height: 178px;
+    overflow: auto;
+    -webkit-flex-flow: row wrap;
+}
+tbody tr{
+    display: -webkit-flex;
+    width: 100%;
+}
+tr td {
+    width: 20%;
+    text-align: center;
+}
