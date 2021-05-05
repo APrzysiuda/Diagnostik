@@ -74,6 +74,42 @@ h1{
     color : black;
 }
 
+.bloc-pdf
+{
+	background-color: rgba(30,144,255,0.3);
+	margin: auto;
+	width: 90%;
+	height: auto;
+	padding-bottom: 3%;   /* distance entre le texte et le cadre*/
+	padding-top: 5%;
+	border: 2px solid;
+	border-color : rgba(30,144,255,0.5);
+	box-sizing: border-box;
+	border-radius: 10px 10px 10px 10px; /* bordure */
+	box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.3);
+	font-family: helvetica, sans-serif;  /* police  */
+	color : black;
+}
+
+.bloc-drop
+{
+	background-color: rgba(30,144,255,0.3);
+	margin: auto;
+	width: 90%;
+	height: auto;
+	padding-bottom: 3%;   /* distance entre le texte et le cadre*/
+	padding-top: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	border: 2px solid;
+	border-color : rgba(30,144,255,0.5);
+	box-sizing: border-box;
+	border-radius: 10px 10px 10px 10px; /* bordure */
+	box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.3);
+	font-family: helvetica, sans-serif;  /* police  */
+	color : black;
+}
+
 .minibloc
 {
 	width: 65%;

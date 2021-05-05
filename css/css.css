@@ -10,9 +10,14 @@
 	float:left;
 }
 .box_shadow{
-	border-radius: 30px
-    box-shadow: 0 0px 15px 4px rgba(0, 0, 0, 0.99)
+	border-radius: 30px;
+    box-shadow: 0 0px 15px 4px rgba(0, 0, 0, 0.99);
 }
+
+.box_shadow_without_radius{
+	box-shadow: 0 0px 15px 4px rgba(0, 0, 0, 0.99);
+}
+
 .hypnogramme{
 	margin: 1%;
 	width: 67%;

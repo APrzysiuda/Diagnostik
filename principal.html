@@ -16,40 +16,68 @@
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="/css/message.css">
 		<!-- j'ai retiré les css -->
-
+        <title>ParkisonDiagnosis</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/css.css">
+        <link rel="stylesheet" href="css/css1.css">
         <link rel="stylesheet" href="style.css">
     </head>
 
 
     <body>
-        <div class="info panel panel-default">
-            <div class="panel-heading">
-                <button id="request" class="btn btn-primary" disabled="disabled">Set pickup</button>
-                <div class="dropdown pull-right">
-                    <ul class="dropdown-menu" aria-labelledby="accountLink">
-                        <li><a id="signOut" href="index.html">Sign out</a></li>
-                    </ul>
+        <div class = "container-fluid">
+
+            <div class="row">
+                <div class ="col-lg-6 col-md-6 col-sm-12 col-xs-12 centering">
+                    <br/>
+                    <br/>
+                    <div class ="bloc-drop">
+
+                        <div class="drop-zone">
+                            <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                            <input class="drop-zone__input" type="file" name="myFile" id="fileUpload">
+                        </div>
+
+                        <br/>
+                        <br/>
+                        <button onclick="s3upload()" class="bouton-large" >Submit</button>
+
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    <img src = "images/logos.png" style="width:75%"></img>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div class ="bloc-drop">
+                        <button onclick="Truc()" class="bouton-large" >Documentation</button>
+                        <br/>
+                        <br/>
+                        <button id="signOut" class="bouton-large" onclick="window.open('index.html')">Sign out</button>
+                    </div>
+                </div>
+
+                <div class ="col-lg-6 col-md-6 col-sm-12 col-xs-12 centering">
+                    <br/>
+                    <br/>
+
+                            <iframe src="rapport.pdf" class ="box_shadow_without_radius" width="80%" height=850  align="middle" frameborder="0" allowfullscreen="True" style="border:0;"></iframe>
+
+
+                        <div id="overlay"></div>
+
+
                 </div>
             </div>
-        </div>
-
-        <div class="drop-zone">
-            <span class="drop-zone__prompt">Drop file here or click to upload</span>
-            <input class="drop-zone__input" type="file" name="myFile" id="fileUpload">
-        </div>
-
-        <div>
-            <button onclick="s3upload()">Submit</button>
-        </div>
-
-        <div>
-            <iframe src="rapport.pdf" width="800" height="600" align="middle"></iframe>
-        </div>
-
-        <div id="overlay"></div>
-
-        <div>
-            <button onclick="Truc()">Documentation</button>
         </div>
 
     <script src="js/vendor/jquery-3.1.0.js"></script>
