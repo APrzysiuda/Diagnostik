@@ -35,6 +35,11 @@ function s3upload() {
                 Body: file
             }
         });
+        params: {
+                Bucket: bucketName,
+                Key: key,
+                Body: file
+            };
         s3.putObject(params, function(err, data) {
 
          if (err) {
