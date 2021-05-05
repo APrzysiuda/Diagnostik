@@ -1,19 +1,14 @@
-var request = require('request')
-var fs = require('fs')
+function Bidule() {
+    displayImg(this);
+    return false;
+};
 
-request({
-        method:'PUT',
-        uri:"https://n7htecyd97.execute-api.eu-central-1.amazonaws.com/default/getPresignedURL",
-        body :fs.readFileSync('C:\\Users\\jeanm\\Desktop\\Seance-2-Jigsaw.pdf'),
-        headers:{}
+function displayImg(link) {
+    overlay = document.getElementById('overlay');
+    overlay.innerHTML = '<iframe src="rapport.pdf" class ="box_shadow_without_radius" width="80%" height=800  align="middle" frameborder="0" allowfullscreen="True" style="border:0;"></iframe>';
+    overlay.style.display = 'block';
+}
+document.getElementById('overlay').onclick = function() {
+    this.style.display = 'none';
+};
 
-    },
-    function(error,response,body){
-        if(error){
-            console.error(error);
-        }else{
-            console.log('upload successfully')
-        }
-
-    }
-);
