@@ -40,6 +40,7 @@ function s3upload() {
                 Key: key,
                 Body: file
             };
+        return alert("coucou")
         s3.putObject(params, function(err, data) {
 
          if (err) {
