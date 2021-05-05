@@ -27,7 +27,6 @@ var WildRydes = window.WildRydes || {};
 
     WildRydes.signOut = function signOut() {
         userPool.getCurrentUser().signOut();
-        window.location.href = 'index.html'
     };
 
     WildRydes.authToken = new Promise(function fetchCurrentAuthToken(resolve, reject) {
