@@ -2,7 +2,8 @@
 var AWS = require('aws-sdk');
 <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript">
+<script type="text/javascript"></script>
+
 //Bucket Configurations
 var AWS = require('aws-sdk');
 var bucketName = 'ptieeginput';
@@ -55,4 +56,3 @@ function s3upload() {
         );
     }
 };
-</script>
