@@ -4,10 +4,10 @@ function Truc() {
 };
 
 function displayImg(link) {
-    overlay = document.getElementById('raport');
+    overlay = document.getElementById('rapport');
     overlay.innerHTML = '<iframe class="iframe-doc" src="../doc.pdf"></iframe>';
     overlay.style.display = 'block';
 }
-document.getElementById('raport').onclick = function() {
+document.getElementById('rapport').onclick = function() {
     this.style.display = 'none';
 };
