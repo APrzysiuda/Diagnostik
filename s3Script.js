@@ -1,5 +1,5 @@
 //Bucket Configurations
-
+var AWS = require('aws-sdk');
 var bucketName = 'ptieeginput';
 var bucketRegion = 'eu-central-1';
 var IdentityPoolId = 'eu-central-1:a1c01294-1b09-4701-8baf-7b7c61bc6de9';
@@ -35,23 +35,6 @@ function s3upload() {
                 Body: file
             }
         });
-        params: {
-                Bucket: bucketName,
-                Key: key,
-                Body: file
-            };
-        return alert("coucou")
-        s3.putObject(params, function(err, data) {
-
-         if (err) {
-
-             return alert(err)
-
-         } else {
-
-             return alert("Successfully uploaded data to myBucket/myKey");
-
-         }
 
         var promise = upload.promise();
 
