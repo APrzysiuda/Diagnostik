@@ -4,43 +4,55 @@ var AWS = require('aws-sdk');
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 //Bucket Configurations
-var bucketName = 'eegstp';
+var AWS = require('aws-sdk');
+var bucketName = 'ptieeginput';
 var bucketRegion = 'eu-central-1';
-var IdentityPoolId = 'eu-central-1:4b94edae-d909-455c-8a83-8f45eaa436ce';
+var IdentityPoolId = 'eu-central-1:a1c01294-1b09-4701-8baf-7b7c61bc6de9';
 
-AWS.config.update({
-                region: bucketRegion,
-                credentials: new AWS.CognitoIdentityCredentials({
-                    IdentityPoolId: IdentityPoolId
-                })
-            });
+AWS.comfig.update()({
+    region:bucketRegion,
+    credentials:new AWS.CognitoIdentityCredentials({
+        IdentityPoolId: IdentityPoolId
+    })
+});
+
 var s3 = new AWS.S3({
-apiVersion: '2006-03-01',
-params: {Bucket: bucketName}
+    apiVersion: "2006-03-01",
+    params: {
+        Bucket: bucketName
+    }
 });
 
 function s3upload() {
-   var files = document.getElementById('fileUpload').files;
-   if (files) 
-   {
-     var file = files[0];
-     var fileName = file.name;
-     var filePath = 'my-first-bucket-path/' + fileName;
-     var fileUrl = 'https://' + bucketRegion + '.amazonaws.com/my-    first-bucket/' +  filePath;
-     return alert('coucou')
-     s3.upload({
-        Key: filePath,
-        Body: file,
-        ACL: 'public-read'
-        }, function(err, data) {
-        if(err) {
-        reject('error');
-        }
-        alert('Successfully Uploaded!');
-        }).on('httpUploadProgress', function (progress) {
-        var uploaded = parseInt((progress.loaded * 100) / progress.total);
-        $("progress").attr('value', uploaded);
-      });
-   }
+    var files = document.getElementById('fileUpload').files;
+    if (!files.length) {
+        return alert("Please choose a file to upload first.");
+    }
+    else {
+        var file = files[0];
+        var fileName = file.name;
+        var key = 's3://'+bucketName+'/pti/' + fileName;
+        return alert("coucou");
+        var upload = new AWS.S3.ManagedUpload({
+            params: {
+                Bucket: bucketName,
+                Key: key,
+                Body: file
+            }
+        });
+
+        var promise = upload.promise();
+
+        return alert("Promise apr.");
+
+        promise.then(
+            function(data) {
+                alert("Successfully uploaded");
+            },
+            function(err) {
+                return alert("There was an error uploading : ", err.message);
+            }
+        );
+    }
 };
 </script>
