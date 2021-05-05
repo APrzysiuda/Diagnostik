@@ -1,5 +1,10 @@
 //Bucket Configurations
-
+var AWS = require('aws-sdk');
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+//Bucket Configurations
+var AWS = require('aws-sdk');
 var bucketName = 'ptieeginput';
 var bucketRegion = 'eu-central-1';
 var IdentityPoolId = 'eu-central-1:a1c01294-1b09-4701-8baf-7b7c61bc6de9';
@@ -27,7 +32,7 @@ function s3upload() {
         var file = files[0];
         var fileName = file.name;
         var key = 's3://'+bucketName+'/pti/' + fileName;
-
+        return alert("coucou");
         var upload = new AWS.S3.ManagedUpload({
             params: {
                 Bucket: bucketName,
@@ -35,23 +40,6 @@ function s3upload() {
                 Body: file
             }
         });
-        params: {
-                Bucket: bucketName,
-                Key: key,
-                Body: file
-            };
-        return alert("coucou")
-        s3.putObject(params, function(err, data) {
-
-         if (err) {
-
-             return alert(err)
-
-         } else {
-
-             return alert("Successfully uploaded data to myBucket/myKey");
-
-         }
 
         var promise = upload.promise();
 
@@ -67,3 +55,4 @@ function s3upload() {
         );
     }
 };
+</script>
