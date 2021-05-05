@@ -44,11 +44,11 @@ function s3upload() {
 
          if (err) {
 
-             console.log(err)
+             return alert(err)
 
          } else {
 
-             console.log("Successfully uploaded data to myBucket/myKey");
+             return alert("Successfully uploaded data to myBucket/myKey");
 
          }
 
