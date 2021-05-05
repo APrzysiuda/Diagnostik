@@ -4,9 +4,9 @@ var AWS = require('aws-sdk');
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 //Bucket Configurations
-var bucketName = eegstp;
-var bucketRegion = eu-central-1;
-var IdentityPoolId = eu-central-1:4b94edae-d909-455c-8a83-8f45eaa436ce;
+var bucketName = 'eegstp';
+var bucketRegion = 'eu-central-1';
+var IdentityPoolId = 'eu-central-1:4b94edae-d909-455c-8a83-8f45eaa436ce';
 
 AWS.config.update({
                 region: bucketRegion,
@@ -27,6 +27,7 @@ function s3upload() {
      var fileName = file.name;
      var filePath = 'my-first-bucket-path/' + fileName;
      var fileUrl = 'https://' + bucketRegion + '.amazonaws.com/my-    first-bucket/' +  filePath;
+     return alert('coucou')
      s3.upload({
         Key: filePath,
         Body: file,
