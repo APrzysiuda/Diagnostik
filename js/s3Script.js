@@ -10,7 +10,7 @@ function rap(link) {
         if (confirm("The analysis should take less than 5 minutes ! Press 'Ok' to start the analysis or 'Cancel' to cancel it !")) {
             setTimeout(function(){
                 rapport = document.getElementById('rapport');
-                rapport.innerHTML = '<iframe src="rapport.pdf" class ="box_shadow_without_radius" width="80%" height=800  align="middle" frameborder="0" allowfullscreen="True" style="border:0;"></iframe>'
+                rapport.innerHTML = '<iframe src="pdf/rapport.pdf" class ="box_shadow_without_radius" width="80%" height=800  align="middle" frameborder="0" allowfullscreen="True" style="border:0;"></iframe>'
             }, 5000);
         }
         document.getElementById("demo").innerHTML = txt;
